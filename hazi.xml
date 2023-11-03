@@ -1,1 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE szotar [
+    <!ELEMENT szotar (szocikk+)>
+    <!ELEMENT szocikk (cimszo, kiejtés, szofaj, példa, forditas)>
+    <!ELEMENT cimszo (#PCDATA)>
+    <!ELEMENT kiejtés (#PCDATA)>
+    <!ELEMENT szofaj (#PCDATA)>
+    <!ELEMENT példa (#PCDATA)>
+    <!ELEMENT forditas (#PCDATA)>
+]>
 
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="szotar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="szocikk" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cimszo" type="xs:string"/>
+                            <xs:element name="kiejtés" type="xs:string"/>
+                            <xs:element name="szofaj" type="xs:string"/>
+                            <xs:element name="példa" type="xs:string"/>
+                            <xs:element name="forditas" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+<szotar>
+    <szocikk>
+        <cimszo>apple</cimszo>
+        <kiejtés>ˈæpəl</kiejtés>
+        <szofaj>főnév</szofaj>
+        <példa>This is a juicy apple.</példa>
+        <forditas>alma</forditas>
+    </szocikk>
+    <szocikk>
+        <cimszo>book</cimszo>
+        <kiejtés>bʊk</kiejtés>
+        <szofaj>főnév</szofaj>
+        <példa>I like to read a good book.</példa>
+        <forditas>könyv</forditas>
+    </szocikk>
+    <szocikk>
+        <cimszo>car</cimszo>
+        <kiejtés>kɑr</kiejtés>
+        <szofaj>főnév</szofaj>
+        <példa>He drives a fast car.</példa>
+        <forditas>autó</forditas>
+    </szocikk>
+    <szocikk>
+        <cimszo>house</cimszo>
+        <kiejtés>haʊs</kiejtés>
+        <szofaj>főnév</szofaj>
+        <példa>They live in a beautiful house.</példa>
+        <forditas>ház</forditas>
+    </szocikk>
+    <szocikk>
+        <cimszo>dog</cimszo>
+        <kiejtés>dɔg</kiejtés>
+        <szofaj>főnév</szofaj>
+        <példa>The dog is playing in the park.</példa>
+        <forditas>kutya</forditas>
+    </szocikk>
+</szotar>
