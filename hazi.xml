@@ -30,6 +30,7 @@
     </xs:element>
 </xs:schema>
 
+<?xml version="1.0" encoding="UTF-8"?>
 <szotar>
     <szocikk>
         <cimszo>apple</cimszo>
@@ -67,3 +68,4 @@
         <forditas>kutya</forditas>
     </szocikk>
 </szotar>
+
